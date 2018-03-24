@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /home/vagrant/.bash_profile
+
 # run apt-get noninteractive to minimize prompts hanging the script
 export DEBIAN_FRONTEND=noninteractive
 
@@ -8,10 +10,6 @@ PURPLE='\033[0;35m'
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
 NC='\033[0m'
-
-server_name="$1"
-serverpilot_client_id="$2"
-serverpilot_api_key="$3"
 
 if [ -z "$server_name" ]; then
 	echo -e "${RED}Script requires server name be passed in as 1st argument${NC}"
