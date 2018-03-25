@@ -74,11 +74,10 @@ rm -- "$0"
 
 echo ""
 echo -e "${GREEN}Success:${NC} ServerPilot will now finish setting up your server. May take few minutes."
+sleep 3
 
 for i in $(seq 1 100)
 do
-    sleep 1.8
+    sleep 1.5
     echo $i
 done | whiptail --title 'Serverpilot server setup' --gauge 'Installation...' 6 60 0
-
-bash /home/vagrant/app-create.sh
