@@ -53,9 +53,13 @@ if [ -z "$SERVERAPIKEY" ] || [ "null" == "$SERVERAPIKEY" ]; then
 	exit 1;
 fi
 
+serverpilot_user_output=$(echo $serverpilot_server_id | serverpilot find sysusers serverid=$serverpilot_server_id id)
+
+printf '\nexport serverpilot_user_id="%s"' $serverpilot_user_output >> /home/vagrant/.bash_profile && source /home/vagrant/.bash_profile
 
 echo -e "${BLUE}Use these values below if prompted${NC}"
 echo -e "${BLUE}Server ID: $SERVERID${NC}"
+echo -e "${BLUE}Sysuser ID: $serverpilot_user_output${NC}"
 echo -e "${BLUE}Server API Key: $SERVERAPIKEY${NC}"
 
 
