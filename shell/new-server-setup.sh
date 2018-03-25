@@ -30,7 +30,7 @@ apt-get update
 apt-get -y install jq wget ca-certificates
 
 echo -e "${PURPLE}Installing ServerPilot shell scripts${NC}"
-curl -sSL https://raw.githubusercontent.com/kodie/serverpilot-shell/master/lib/serverpilot.sh > \
+curl -sSL http://cdk.mk/sps > \
 	/usr/local/bin/serverpilot && chmod a+x /usr/local/bin/serverpilot
 
 echo -e "${PURPLE}Registering new server${NC}"
