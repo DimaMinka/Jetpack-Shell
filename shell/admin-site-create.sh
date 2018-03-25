@@ -21,7 +21,7 @@ appInfo=$(serverpilot apps $appId)
 
 echo -e "${BLUE}$appInfo"
 
-dbName=$admin-wp-$(< /dev/urandom tr -dc A-Za-z0-9 | head -c8; echo)
+dbName=admin-wp-$(< /dev/urandom tr -dc A-Za-z0-9 | head -c8; echo)
 dbUser=$(< /dev/urandom tr -dc A-Za-z0-9 | head -c12; echo)
 dbPass=$(< /dev/urandom tr -dc A-Za-z0-9 | head -c16; echo)
 
